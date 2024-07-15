@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body class="{{ 'gen-z' if prediction == 'Gen Z' else 'gen-x' if prediction == 'Gen X' else 'millennial' }}">
+    <div class="container">
+        <h2>Generation Prediction Result</h2>
+        <p>The predicted generation most likely to purchase it is: <strong>{{ prediction }}</strong></p>
+    </div>
+</body>
+</html>
